@@ -4,14 +4,20 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 
 public class MainActivity extends Activity {
 
+    WebView navegador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        navegador=(WebView) findViewById(R.id.webkit);
+        navegador.getSettings().setJavaScriptEnabled(true);
+        navegador.loadUrl("http://www.7towns4europe.eu");
     }
 
 
